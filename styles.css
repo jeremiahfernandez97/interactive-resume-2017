@@ -1,0 +1,403 @@
+/**
+Copyright 2016 Jeremiah Fernandez
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/** please email jeremiahfernandezzzz@gmail.com regarding the use of this stylesheet */
+
+@keyframes animate-char{
+	from {background-position: 0px;}
+	to {background-position: -600px;}
+}
+
+@keyframes animate-char2{
+	from {background-position: -600px;}
+	to {background-position: 0px;}
+}
+
+@keyframes animate-char3{
+	from {background-position: -750px;}
+	to {background-position: -1350px;}
+}
+
+@keyframes animate-char4{
+	from {background-position: -1350px;}
+	to {background-position: -750px;}
+}
+
+@keyframes animate-char5{
+	from {background-position: -1500px;}
+	to {background-position: -2100px;}
+}
+
+@keyframes animate-char6{
+	from {background-position: -2100px;}
+	to {background-position: -1500px;}
+}
+
+@keyframes jump-char{
+	0% {bottom: 8vh;}
+	5% {bottom: 15vh;}
+	100% {bottom: 8vh;}
+}
+
+@keyframes sidescroll{
+	from { transform: translate( 0px, 0px) }
+	to { transform: translate( 8000px, -10px) }
+}
+
+@keyframes sidescroll2{
+	from { transform: translate( 0px, 0px) }
+	to { transform: translate( -8000px, -10px) }
+}
+
+.bg {
+	position: absolute;
+	width: 9500%;
+	height: 100vh;
+}
+
+.image {
+	position: relative;
+	height: 500vh;
+}
+
+.ground {
+	position: absolute;
+	bottom: 0vh;
+	width: 100%;
+	height: 10vh;
+	background-color: #030012;
+	z-index: 97;
+	opacity: 0.7;
+}
+
+.cloud-parallax {
+	position: absolute;
+	width: 9500%;
+	float: left;
+}
+
+.cloud-container {
+	position: relative;
+	float: left;
+	width: 500px;
+	height: 100vh;
+}
+
+.cloud-1 {
+	position: absolute;
+	width: 234px;
+	height: 78px;
+	left: 50%;
+	top: 25%;
+	background-image: url('image/cloud.png');
+	opacity: 0.5;
+}
+
+.cloud-2 {
+	position: absolute;
+	width: 234px;
+	height: 78px;
+	left: 50%;
+	top: 10%;
+	background-image: url('image/cloud.png');
+	opacity: 0.5;
+}
+
+.cloud-fast {
+	animation: sidescroll 85.0s infinite;
+}
+
+.cloud-slow {
+	animation: sidescroll2 200.0s infinite;
+}
+
+.object-parallax {
+	position: absolute;
+	width: 9500%;
+	z-index: 98;
+	//transition : transform 0.2s;
+}
+
+.object-parallax2 {
+	left: -5%;
+	position: absolute;
+	width: 9500%;
+	//transition : transform 0.2s;
+	z-index: 97;
+}
+
+.object-container {
+	float: left;
+	width: 500px;
+	height: 100vh;
+}
+
+.dialog {
+	background: url('image/dialog.png');
+	position: fixed;
+	width: 240px;
+	height: 180px;
+	bottom: 225px;
+	text-align: center;
+	font-size: 17pt;
+	font-family: slkscr;
+	z-index: 99;
+	color: white;
+}
+
+.title {
+	position: absolute;
+	text-align: center;
+	font-family: Pixeled;
+	z-index: 99;
+	color: white;
+}
+
+h1, h2 {
+	position: relative;
+	top: 60vh;
+}
+
+.hospital {
+	position: absolute;
+	background: url('image/hospital.png');
+	width: 700px;
+	height: 455px;
+	bottom: -100vh;
+	text-align: center;
+	font-size: 14pt;
+	font-family: Pixeled;
+	opacity: 0.9;
+}
+
+.grade-school {
+	position: absolute;
+	background: url('image/grade-school.png');
+	width: 700px;
+	height: 455px;
+	top: -100vh;
+	font-size: 14pt;
+	font-family: Pixeled;
+	transform: rotate(180deg) scaleX(-1);
+	opacity: 0.9;
+}
+
+.rotate-text {
+	text-align: center;
+	left: 150px;
+	top: 30px;
+	position: absolute;
+	transform: rotate(180deg) scaleX(-1);
+}
+
+.high-school {
+	position: absolute;
+	background: url('image/high-school.png');
+	width: 700px;
+	height: 455px;
+	bottom: -100vh;
+	text-align: center;
+	font-size: 14pt;
+	font-family: Pixeled;
+	opacity: 0.9;
+}
+
+.skill-set {
+	position: absolute;
+	width: 700px;
+	height: 455px;
+	top: -100vh;
+}
+
+.skill-text {
+	position: relative;
+	top: 200px;
+	text-align: center;
+	font-size: 14pt;
+	font-family: Pixeled;
+	color: grey;
+}
+
+.otherskill-set {
+	position: absolute;
+	width: 700px;
+	height: 455px;
+	top: -100vh;
+	text-align: center;
+	font-size: 14pt;
+	font-family: Pixeled;
+}
+
+.php {
+	position: absolute;
+	background: url('image/php.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 650px;
+	height: 400px;
+	bottom: -50vh;
+	text-align: center;
+	font-size: 17pt;
+	font-family: slkscr;
+	opacity: 0.9;
+}
+
+.mysql {
+	position: absolute;
+	background-image: url('image/mysql.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 400px;
+	bottom: -50vh;
+	text-align: center;
+	font-size: 17pt;
+	font-family: slkscr;
+	opacity: 0.9;
+}
+
+.cpp {
+	position: absolute;
+	background-image: url('image/cpp.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 1000px;
+	height: 215px;
+	bottom: -50vh;
+	text-align: center;
+	font-size: 17pt;
+	font-family: slkscr;
+	opacity: 0.9;
+}
+
+.javascript {
+	position: absolute;
+	background: url('image/javascript.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 700px;
+	height: 500px;
+	top: -100vh;
+	text-align: center;
+	font-size: 14pt;
+	font-family: Pixeled;
+	opacity: 0.9;
+}
+
+.css {
+	position: absolute;
+	background: url('image/css.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 700px;
+	height: 550px;
+	top: -100vh;
+	text-align: center;
+	font-size: 14pt;
+	font-family: Pixeled;
+	opacity: 0.9;
+}
+
+.html {
+	position: absolute;
+	background: url('image/html.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 700px;
+	height: 600px;
+	top: -90vh;
+	text-align: center;
+	font-size: 14pt;
+	font-family: Pixeled;
+	opacity: 0.9;
+}
+
+#contact-info {
+	z-index: 100;
+	font-size: 22pt;
+	font-family: slkscr;
+	text-align: center;
+	color:white;
+}
+
+@font-face {
+	font-family: Pixeled;
+	src: url('font/Pixeled.ttf')
+}
+
+@font-face {
+	font-family: slkscr;
+	src: url('font/slkscr.ttf')
+}
+
+.char {
+	position: absolute;
+	z-index: 97;
+	width: auto;
+	left: 40vw;
+}
+
+#kramer {
+	position: fixed;
+	width: 150px;
+	height: 198px;
+	background: url('image/kramer_sprites.png');
+	background-position: -600px;
+	bottom: 10vh;
+	//transition: bottom 1.0s;
+	text-align: center;
+	font-family: Pixeled;
+	font-size: 0;
+	animation: animate-char steps(4) reverse infinite 1s;
+}
+
+.ghost {
+	position: absolute;
+	background: url('image/ghibli_ghost.png');
+	width: 150px;
+	height: 500px;
+	top: -15vh;
+	text-align: center;
+	font-size: 14pt;
+	font-family: Pixeled;
+	animation: animate-char2 1.0s steps(4) infinite;
+	transform: rotate(180deg) scaleX(-1) scale(.80);
+	color: grey;
+	opacity: 0.5;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow: hidden;
+}
+
+body :not(a) {
+	user-select: none;
+}
+
+.rotator {
+	position: absolute;
+	background-image: url('image/contact-form.png);
+	background-repeat: no-repeat;
+	width: 700px;
+	height: 450px;
+	bottom: -120vh;
+	opacity: 0.9;
+}
+
